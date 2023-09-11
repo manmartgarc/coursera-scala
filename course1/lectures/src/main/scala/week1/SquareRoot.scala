@@ -1,5 +1,7 @@
 package week1
 
+import scala.annotation.tailrec
+
 def square(x: Double) = x * x
 def abs(x: Double) = if x > 0 then x else -x
 
@@ -19,6 +21,7 @@ def sqrt(x: Double) = {
     * @return
     *   the square root of x
     */
+  @tailrec
   def sqrtIter(guess: Double): Double =
     if isGoodEnough(guess) then guess
     else sqrtIter(improve(guess))
@@ -45,7 +48,7 @@ def sqrt(x: Double) = {
   def isGoodEnough(guess: Double, precision: Double = 1e-6) =
     abs(square(guess) - x) < precision
 
-  sqrtIter(1.0)
+  if x == 0 then 0 else sqrtIter(1.0)
 }
 
 @main def testSqrt = println(sqrt(2))
