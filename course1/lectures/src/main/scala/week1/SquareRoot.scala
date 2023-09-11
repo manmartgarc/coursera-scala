@@ -1,3 +1,5 @@
+package week1
+
 def square(x: Double) = x * x
 def abs(x: Double) = if x > 0 then x else -x
 
