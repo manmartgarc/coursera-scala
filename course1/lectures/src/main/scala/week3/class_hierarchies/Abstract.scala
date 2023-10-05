@@ -9,6 +9,8 @@ object IntSet:
   def apply(): IntSet = Empty
   def apply(x: Int): IntSet = Empty.incl(x)
   def apply(x: Int, y: Int): IntSet = Empty.incl(x).incl(y)
+  def apply(xs: Int*): IntSet =
+    Empty.union(xs.foldLeft(Empty: IntSet)((s, x) => s.incl(x)))
 
 object Empty extends IntSet:
   def contains(x: Int) = false
