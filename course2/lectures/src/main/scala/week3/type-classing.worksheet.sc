@@ -8,5 +8,3 @@ given RationalOrdering: Ordering[Rational] with
     val xn = x.num * y.den
     val yn = y.num * x.den
     if xn < yn then -1 else if xn > yn then 1 else 0
-
-
