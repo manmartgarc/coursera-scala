@@ -11,6 +11,7 @@ lazy val root = project
       "org.scalameta" %% "munit" % "0.7.29" % Test,
       ("org.apache.spark" %% "spark-core" % "3.2.0").cross(CrossVersion.for3Use2_13),
       ("org.apache.spark" %% "spark-sql" % "3.2.0").cross(CrossVersion.for3Use2_13),
+      "io.github.vincenzobaz" %% "spark-scala3" % "0.1.3",
     ),
     run / fork := true,
     Test / fork := true
