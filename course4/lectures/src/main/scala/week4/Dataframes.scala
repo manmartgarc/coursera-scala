@@ -28,7 +28,7 @@ object Dataframes {
 
   @main def dfs: Unit =
     Logger.getLogger("org.apache.spark").setLevel(Level.OFF)
-    System.setProperty("hadoop.home.dir", "C:/Users/manma");
+    System.setProperty("hadoop.home.dir", "C:/Users/manma")
 
     val spark: SparkSession =
       SparkSession
